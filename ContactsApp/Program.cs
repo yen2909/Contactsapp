@@ -11,6 +11,10 @@ namespace ContactsApp
         static void Main(string[] args)
         {
             List<Contact> danhba = new List<Contact>();
+
+            // doc du lieu tu file
+                XuLyFile.LayDuLieuTuFile(danhba);
+
             char r;
             do
             {
@@ -40,6 +44,8 @@ namespace ContactsApp
                                  c.GetDiaChi(),
                                  c.GetSDT());
             }
+
+            XuLyFile.LuuDuLieuRaFile(danhba);
             Console.ReadLine();
         }
     }
